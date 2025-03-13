@@ -72,7 +72,7 @@ If you don't have JRE 8 with JavaFX installed on **Linux**, use the JRE supplied
 
 **Now, if the installer has started without errors, you can proceed to the next step.** However, if the installer has issued a file corruption alert, check for `package.zip`, `appIcon.png` and `installercfg.json` files. They are described  [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#configuring-installer).
 
-## Building quInstaller
+### Building quInstaller
 ### Windows
 A quick way is still in development, so.. you will need [WinRar](https://www.win-rar.com/start.html) to continue
 1. In the explorer, select all files that the installer needs and click the right mouse button
