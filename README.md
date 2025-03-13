@@ -1,4 +1,5 @@
 
+
 # quInstaller
 Simple installer for you program. No compilation needed. (README in-progress)
 
@@ -69,7 +70,15 @@ If you don't have JRE 8 with JavaFX installed on **Linux**, use the JRE supplied
 
 ## Building quInstaller
 ### Windows
-inprocess//////
+A quick way is still in development, so.. you will need [WinRar](https://www.win-rar.com/start.html) to continue
+1. In the explorer, select all files that the installer needs and click the right mouse button
+2. In the context menu, select WinRAR `Add to archieve..`
+3. In the window that opens, select `Create SFX archive`. You can change the archive name, format and packaging method as you wish
+4. In the `Advanced` tab open `SFX options...`
+5. Open `Install` and in the `Run after extraction` field, enter `main.exe`
+6. In the `Modes` tab, enable `Unpack to temporary folder` and `Hide all`
+7. In the `Icon` tab, you can optionally add the SFX icon, which will be the icon of your installer.
+8. Now just click `Ok`, wait for the archive to be created, and that's it! Your installer is ready.
 ### Linux
 1. Install `makeself` through your distribution's package manager or from [GitHub](https://github.com/megastep/makeself)
 2. Open terminal and change dir (`cd`) to quInstaller main path
