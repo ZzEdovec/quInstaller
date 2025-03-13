@@ -47,24 +47,24 @@ quInstaller - универсальный и простой установщик 
 **На Windows** вы можете использовать [переменные окружения](https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) при указании папок в конфигурации деинсталлятора.  
 Например,
 
-> uninstallercfg.json
+> installercfg.json
 
-`{
-    "AppCustomDirs":[
-        "%TEMP%\\Rudi",
-        "%APPDATA%\\Rudi"
-    ]
-}`
+    {
+        "AppCustomDirs":[
+            "%TEMP%\\Rudi",
+            "%APPDATA%\\Rudi"
+        ]
+    }
 
 **На Linux** вы можете использовать только переменные `%TEMP%` или `%USERHOME%` в конфигурации **деинсталлятора**, но в отличие от версии для Windows, вы можете использовать переменные `%JAVA_BIN%` и `%APP_PATH%` в параметре `AppExec` конфигурации **установщика**.  
 Например,
 
 > installercfg.json
 
-`{
-    "AppName":"Rudi",
-    "AppExec":"env GDK_BACKEND=x11 \"%JAVA_BIN%\" -jar \"%APP_PATH%/Rudi.jar\""
-}`
+    {
+        "AppName":"Rudi",
+        "AppExec":"env GDK_BACKEND=x11 \"%JAVA_BIN%\" -jar \"%APP_PATH%/Rudi.jar\""
+    }
 
 ### 🧪 Тестирование установщика
 После того как вы все настроили, запустите `main.exe` на Windows или `installer.jar` на Linux.
