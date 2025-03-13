@@ -1,14 +1,14 @@
 
 
-# quInstaller
+# ⬇️ quInstaller
 Simple installer for you program. No compilation needed. (README in-progress)
 
-### What is it?
+### ❓ What is it?
 quInstaller - a universal and simple installer for any program in any programming language. It does not require compilation every time you want to create a new installer. It also supports applications that use Java Runtime Environment (JRE) versions 8 and later due to the fact that it runs on the JVM itself!
 ### Bugs? Questions? Ideas?
 Contact me in [Telegram](https://t.me/queinu) or open an [issue](https://github.com/ZzEdovec/quInstaller/issues)
 
-### Please donate
+### 🥺 Please donate
 My projects are created out of pure enthusiasm, and if you appreciate my work, you can financially support me.
 [Click here to donate](https://www.donationalerts.com/r/queinu)
 
