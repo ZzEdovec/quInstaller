@@ -31,8 +31,8 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 	#### Linux-only parameters
 	`GenericName` - Generic name of the application, for example `Web Browser`
 	
-3. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
-4. Pack all the files of your program that need to be installed into an archive named `package.zip` and place it in the same folder.
+2. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
+3. Pack all the files of your program that need to be installed into an archive named `package.zip` and place it in the same folder.
 
 ### Configuring uninstaller
 **If your program creates additional folders** outside of its directory during operation, you can specify them inside the `AppCustomDirs` array in the `uninstallercfg.json` file. In this case, when deleting the program, the user will be prompted to delete these folders.
