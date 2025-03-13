@@ -29,7 +29,7 @@ class MainForm extends AbstractForm
         $this->header->text = sprintf(__('mainform.header.header',$GLOBALS['Locale']), $GLOBALS['AppParams']['AppName']);
         $this->subheader->text = __('mainform.header.subheader',$GLOBALS['Locale']);
         
-        $this->label->text = __('mainform.path.label');
+        $this->label->text = __('mainform.path.label',$GLOBALS['Locale']);
         
         $this->labelAlt->text = __('mainform.links.label',$GLOBALS['Locale']);
         $this->desktopLink->text = __('mainform.links.desktop',$GLOBALS['Locale']);

@@ -17,5 +17,6 @@
     "MAINFORM.INSTALLATION.RUN": "Запустить",
     "MAINFORM.INSTALLATION.EXIT": "Выйти",
     "MAINFORM.INSTALLBUTTON": "Установить",
-    "MAINFORM.INSTALLBUTTON.STARTED": "Выполняется установка"
+    "MAINFORM.INSTALLBUTTON.STARTED": "Выполняется установка",
+    "MAINFORM.ERRORFETCHING": "Ошибка получения последней версии"
 }

@@ -18,5 +18,6 @@
     "MAINFORM.INSTALLATION.RUN": "Run",
     "MAINFORM.INSTALLATION.EXIT": "Exit",
     "MAINFORM.INSTALLBUTTON": "Install",
-    "MAINFORM.INSTALLBUTTON.STARTED": "Installation in progress"
+    "MAINFORM.INSTALLBUTTON.STARTED": "Installation in progress",
+    "MAINFORM.ERRORFETCHING": "Error getting the latest version"
 }
