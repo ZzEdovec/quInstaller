@@ -22,7 +22,7 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 		You can configure the installer parameters in this file.
 	#### Cross-platform parameters
 	`AppName` - Name of your application **(REQUIRED)**
-	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=%7B%0A%20%20%20%20%22AppName%22:%22Rudi%22,%0A%20%20%20%20%22AppExec%22:%22env%20GDK_BACKEND=x11%20%5C%22%25JAVA_BIN%25%5C%22%20-jar%20%5C%22%25APP_PATH%25/Rudi.jar%5C%22%22%0A%7D)) **(REQUIRED)**
+	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here]([https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=%7B%0A%20%20%20%20%22AppName%22:%22Rudi%22,%0A%20%20%20%20%22AppExec%22:%22env%20GDK_BACKEND=x11%20%5C%22%25JAVA_BIN%25%5C%22%20-jar%20%5C%22%25APP_PATH%25/Rudi.jar%5C%22%22%0A%7D](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=configuration.%20For%20example%2C-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22%3A%22Rudi%22%2C%0A%20%20%20%20%22AppExec))) **(REQUIRED)**
 	#### Windows-only parameters
 	`AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) 
 	`Publisher` - Author or publisher of the application **(REQUIRED)**
