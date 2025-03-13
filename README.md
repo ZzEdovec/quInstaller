@@ -5,6 +5,8 @@ Simple installer for you program. No compilation needed. (README in-progress)
 
 ### What is it?
 quInstaller - a universal and simple installer for any program in any programming language. It does not require compilation every time you want to create a new installer. It also supports applications that use Java Runtime Environment (JRE) versions 8 and later due to the fact that it runs on the JVM itself!
+### Bugs? Questions? Ideas?
+Contact me in [Telegram](https://t.me/queinu) or open an [issue](https://github.com/ZzEdovec/quInstaller/issues)
 
 ### Please donate
 My projects are created out of pure enthusiasm, and if you appreciate my work, you can financially support me.
@@ -20,7 +22,7 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 		You can configure the installer parameters in this file.
 	#### Cross-platform parameters
 	`AppName` - Name of your application **(REQUIRED)**
-	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here](#Environment%20variables)) **(REQUIRED)**
+	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=%7B%0A%20%20%20%20%22AppName%22:%22Rudi%22,%0A%20%20%20%20%22AppExec%22:%22env%20GDK_BACKEND=x11%20%5C%22%25JAVA_BIN%25%5C%22%20-jar%20%5C%22%25APP_PATH%25/Rudi.jar%5C%22%22%0A%7D)) **(REQUIRED)**
 	#### Windows-only parameters
 	`AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) 
 	`Publisher` - Author or publisher of the application **(REQUIRED)**
@@ -66,7 +68,7 @@ If you don't have JRE 8 with JavaFX installed on **Linux**, use the JRE supplied
 2. Execute the `jre/bin/java -jar quInstaller.jar` command
 *If Java crashed with a critical error after executing the command and you are using Wayland, use the* `GDK_BACKEND=x11 jre/bin/java -jar quInstaller.jar` *command*
 
-**Now, if the installer has started without errors, you can proceed to the next step.** However, if the installer has issued a file corruption alert, check for `package.zip`, `appIcon.png` and `installercfg.json` files. They are described  [here](#Configuring%20installer).
+**Now, if the installer has started without errors, you can proceed to the next step.** However, if the installer has issued a file corruption alert, check for `package.zip`, `appIcon.png` and `installercfg.json` files. They are described  [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#configuring-installer).
 
 ## Building quInstaller
 ### Windows
@@ -78,7 +80,7 @@ A quick way is still in development, so.. you will need [WinRar](https://www.win
 5. Open `Install` and in the `Run after extraction` field, enter `main.exe`
 6. In the `Modes` tab, enable `Unpack to temporary folder` and `Hide all`
 7. In the `Icon` tab, you can optionally add the SFX icon, which will be the icon of your installer.
-8. Now just click `Ok`, wait for the archive to be created, and that's it! Your installer is ready.
+8. Now just click `Ok`, wait for the archive to be created, and that's it! **Your installer is ready.**
 ### Linux
 1. Install `makeself` through your distribution's package manager or from [GitHub](https://github.com/megastep/makeself)
 2. Open terminal and change dir (`cd`) to quInstaller main path
