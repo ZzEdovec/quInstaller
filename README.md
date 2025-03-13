@@ -22,6 +22,7 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 		You can configure the installer parameters in this file.
 	#### Cross-platform parameters
 	`AppName` - Name of your application **(REQUIRED)**
+
 	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=configuration.%20For%20example%2C-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22%3A%22Rudi%22%2C%0A%20%20%20%20%22AppExec) **(REQUIRED)**
 	#### Windows-only parameters
 	`AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) 
@@ -29,8 +30,8 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 	#### Linux-only parameters
 	`GenericName` - Generic name of the application, for example `Web Browser`
 	
-2. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
-3. Pack all the files of your program that need to be installed into an archive named `package.zip` and place it in the same folder.
+3. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
+4. Pack all the files of your program that need to be installed into an archive named `package.zip` and place it in the same folder.
 
 ### Configuring uninstaller
 **If your program creates additional folders** outside of its directory during operation, you can specify them inside the `AppCustomDirs` array in the `uninstallercfg.json` file. In this case, when deleting the program, the user will be prompted to delete these folders.
