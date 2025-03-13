@@ -47,7 +47,7 @@ quInstaller - универсальный и простой установщик 
 **На Windows** вы можете использовать [переменные окружения](https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) при указании папок в конфигурации деинсталлятора.  
 Например,
 
-> installercfg.json
+> uninstallercfg.json
 
     {
         "AppCustomDirs":[
