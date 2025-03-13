@@ -67,6 +67,7 @@ After we have everything set up, run `main.exe` on Windows or `installer.jar` on
 If you don't have JRE 8 with JavaFX installed on **Linux**, use the JRE supplied with quInstaller to run it:
 1. Open terminal and change dir (`cd`) to quInstaller main path
 2. Execute the `jre/bin/java -jar quInstaller.jar` command
+
 *If Java crashed with a critical error after executing the command and you are using Wayland, use the* `GDK_BACKEND=x11 jre/bin/java -jar quInstaller.jar` *command*
 
 **Now, if the installer has started without errors, you can proceed to the next step.** However, if the installer has issued a file corruption alert, check for `package.zip`, `appIcon.png` and `installercfg.json` files. They are described  [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#configuring-installer).
