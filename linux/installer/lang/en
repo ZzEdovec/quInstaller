@@ -1,0 +1,22 @@
+{
+    "APPMODULE.CORRUPTED": "The installer is corrupted! Contact the developer of the program you are installing.",
+    "APPMODULE.NEEDROOT": "Administrator rights are required to install the program.",
+    
+    "MAINFORM.HEADER.HEADER": "Installation of %s",
+    "MAINFORM.HEADER.SUBHEADER": "Configure settings if needed",
+    "MAINFORM.PATH.LABEL": "Installation path",
+    "MAINFORM.PATH.WRITEERROR": "No write access to the folder",
+    "MAINFORM.PATH.PROGROOTCREATE": "Create a separate folder for the installation?",
+    "MAINFORM.LINKS.LABEL": "Shortcuts",
+    "MAINFORM.LINKS.DESKTOP": "Desktop shortcut",
+    "MAINFORM.LINKS.APPMENU": "Start menu shortcut",
+    "MAINFORM.SYSTEM.LABEL": "System settings",
+    "MAINFORM.SYSTEM.UNINSTALLER": "Create uninstaller",
+    "MAINFORM.SYSTEM.REGUNINSTALLER": "Register uninstaller in the registry",
+    "MAINFORM.INSTALLATION.LABEL": "Installation progress",
+    "MAINFORM.INSTALLATION.LABEL.SUCCESS": "Installation completed!",
+    "MAINFORM.INSTALLATION.RUN": "Run",
+    "MAINFORM.INSTALLATION.EXIT": "Exit",
+    "MAINFORM.INSTALLBUTTON": "Install",
+    "MAINFORM.INSTALLBUTTON.STARTED": "Installation in progress"
+}

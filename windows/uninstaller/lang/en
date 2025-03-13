@@ -1,0 +1,12 @@
+{
+    "APPMODULE.NOCONFIG": "Failed to find uninstaller configuration!",
+    "APPMODULE.NEEDROOT": "Administrator rights are required to uninstall this program!",
+    "APPMODULE.STARTFAILED": "Failed to start uninstaller - %s",
+    
+    "MAINFORM.HEADER": "Uninstalling %s",
+    "MAINFORM.SUBHEADER": "Configure settings if needed",
+    "MAINFORM.PATHS.LABEL": "Delete service directories",
+    "MAINFORM.UNINSTALLBTN": "Uninstall",
+    "MAINFORM.UNINSTALLBTN.INPROGRESS": "Uninstallation in progress",
+    "MAINFORM.SUCCESS": "Uninstallation completed!"
+}

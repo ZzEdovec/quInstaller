@@ -1,0 +1,12 @@
+{
+    "APPMODULE.NOCONFIG": "Не удалось найти конфигурацию деинсталлятора!",
+    "APPMODULE.NEEDROOT": "Необходимы права администратора для деинсталляции этой программы!",
+    "APPMODULE.STARTFAILED": "Не удалось запустить деинсталлятор - %s",
+    
+    "MAINFORM.HEADER": "Удаление %s",
+    "MAINFORM.SUBHEADER": "Настройте параметры, если нужно",
+    "MAINFORM.PATHS.LABEL": "Удаление служебных каталогов",
+    "MAINFORM.UNINSTALLBTN": "Удалить",
+    "MAINFORM.UNINSTALLBTN.INPROGRESS": "Выполняется удаление",
+    "MAINFORM.SUCCESS": "Удаление завершено!"
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504" prefWidth="688" styleClass="">
+  <children>
+    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="header" layoutX="32" layoutY="24" prefHeight="30" prefWidth="296" styleClass="label " text="Установка program" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="20"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-header" visible="1"/>
+    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="subheader" layoutX="32" layoutY="48" prefHeight="21" prefWidth="416" styleClass="label " text="Настройте параметры, если нужно" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="15"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-subheader" visible="1"/>
+    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel" layoutX="32" layoutY="88" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="88" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="24" layoutY="16" prefHeight="17" prefWidth="120" styleClass="label " text="Путь установки" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="12"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
+        <TextField alignment="CENTER_LEFT" editable="false" focusTraversable="false" id="installPath" layoutX="24" layoutY="40" prefColumnCount="12" prefHeight="25" prefWidth="256" promptText="" styleClass="text-input text-field " text="">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </TextField>
+        <Data cursor="HAND" enabled="1" id="data-installPath" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
+    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panelAlt" layoutX="32" layoutY="184" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="112" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="24" layoutY="16" prefHeight="16" prefWidth="96" styleClass="label " text="Ярлыки" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="12"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-labelAlt" visible="1"/>
+        <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="desktopLink" layoutX="24" layoutY="40" prefHeight="24" prefWidth="200" selected="true" styleClass="check-box " text="Ярлык на рабочем столе" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </CheckBox>
+        <Data cursor="HAND" enabled="1" id="data-desktopLink" visible="1"/>
+        <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="appmenuLink" layoutX="24" layoutY="64" prefHeight="24" prefWidth="200" selected="true" styleClass="check-box " text="Ярлык в меню «Пуск»" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </CheckBox>
+        <Data cursor="HAND" enabled="1" id="data-appmenuLink" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-panelAlt" visible="1"/>
+    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel3" layoutX="32" layoutY="304" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="112" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label3" layoutX="24" layoutY="16" prefHeight="17" prefWidth="192" styleClass="label " text="Системные параметры" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="12"/>
+          </font>
+        </LabelEx>
+        <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="uninstaller" layoutX="24" layoutY="40" prefHeight="24" prefWidth="200" selected="true" styleClass="check-box " text="Создать деинсталлятор" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </CheckBox>
+        <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="uninstallerReg" layoutX="24" layoutY="64" prefHeight="24" prefWidth="224" selected="true" styleClass="check-box " text="Записать деинсталлятор в реестр" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </CheckBox>
+        <Data cursor="DEFAULT" enabled="1" id="data-label3" visible="1"/>
+        <Data cursor="HAND" enabled="1" id="data-uninstaller" visible="1"/>
+        <Data cursor="HAND" enabled="1" id="data-uninstallerReg" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel3" visible="1"/>
+    <ImageViewEx autoSize="false" centered="true" focusTraversable="false" height="128" id="appIcon" layoutX="448" layoutY="188" mosaic="false" mosaicGap="0" proportional="true" stretch="true" styleClass="" textFill="#000000" width="128">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </ImageViewEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-appIcon" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="32" layoutY="424" prefHeight="48" prefWidth="304" styleClass="button " text="Установить" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="HAND" enabled="1" id="data-button" visible="1"/>
+    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel4" layoutX="352" layoutY="208" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" opacity="0" prefHeight="88" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="progressLabel" layoutX="24" layoutY="16" prefHeight="17" prefWidth="200" styleClass="label " text="Прогресс установки" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="12"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-progressLabel" visible="1"/>
+        <ProgressBar focusTraversable="false" id="progressBar" layoutX="24" layoutY="40" prefHeight="24" prefWidth="256" progress="0" styleClass="progress-bar "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-progressBar" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="runButton" layoutX="160" layoutY="40" opacity="0" prefHeight="32" prefWidth="120" styleClass="button " text="Запустить" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-runButton" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="exitButton" layoutX="24" layoutY="40" opacity="0" prefHeight="32" prefWidth="128" styleClass="button " text="Выйти" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-exitButton" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel4" visible="1"/>
+  </children>
+</AnchorPane>

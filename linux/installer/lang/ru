@@ -1,0 +1,21 @@
+{
+    "APPMODULE.CORRUPTED": "Установщик поврежден! Обратитесь к разработчику программы, которую вы устанавливаете.",
+    "APPMODULE.NEEDROOT": "Для установки программы требуются права администратора.",
+    "MAINFORM.HEADER.HEADER": "Установка %s",
+    "MAINFORM.HEADER.SUBHEADER": "Настройте параметры, если нужно",
+    "MAINFORM.PATH.LABEL": "Путь установки",
+    "MAINFORM.PATH.WRITEERROR": "Нет доступа на запись в папку",
+    "MAINFORM.PATH.PROGROOTCREATE": "Создать отдельную папку для установки программы?",
+    "MAINFORM.LINKS.LABEL": "Ярлыки",
+    "MAINFORM.LINKS.DESKTOP": "Ярлык на рабочем столе",
+    "MAINFORM.LINKS.APPMENU": "Ярлык в меню «Пуск»",
+    "MAINFORM.SYSTEM.LABEL": "Системные параметры",
+    "MAINFORM.SYSTEM.UNINSTALLER": "Создать деинсталлятор",
+    "MAINFORM.SYSTEM.REGUNINSTALLER": "Записать деинсталлятор в реестр",
+    "MAINFORM.INSTALLATION.LABEL": "Прогресс установки",
+    "MAINFORM.INSTALLATION.LABEL.SUCCESS": "Установка завершена!",
+    "MAINFORM.INSTALLATION.RUN": "Запустить",
+    "MAINFORM.INSTALLATION.EXIT": "Выйти",
+    "MAINFORM.INSTALLBUTTON": "Установить",
+    "MAINFORM.INSTALLBUTTON.STARTED": "Выполняется установка"
+}
