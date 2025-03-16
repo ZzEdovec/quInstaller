@@ -1,3 +1,4 @@
+![quInstaller window](https://github.com/ZzEdovec/quInstaller/raw/refs/heads/main/readme-banner.png)
 # ⬇️ quInstaller
 Simple installer for you program. No compilation needed. (README in-progress)
 
@@ -23,14 +24,15 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 1. Open `installercfg.json` file in any text editor.
 		You can configure the installer parameters in this file.
 	#### Cross-platform parameters
-	`AppName` - Name of your application **(REQUIRED)**
-
-	`AppExec` - Main executable file of your program (on Linux, you can add arguments, see example [here](https://github.com/ZzEdovec/quInstaller?tab=readme-ov-file#Environment%20variables:~:text=configuration.%20For%20example%2C-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22%3A%22Rudi%22%2C%0A%20%20%20%20%22AppExec) **(REQUIRED)**
+	- `AppName` - Name of your application **(REQUIRED)**
+	- `AppExec` - Main executable file of your program on Windows (string), array of arguments on Linux (even if you specify only the executable file to run without arguments, it should still be inside the array). For Linux see example [here](https://github.com/ZzEdovec/quInstaller#:~:text=configuration.%20For%20example%2C-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22%3A%22Rudi%22%2C%0A%20%20%20%20%22AppExec) **(REQUIRED)**
+    - `AppUsesAutoStart` - Specifies whether, by default, the user should be prompted to add the program to the startup
 	#### Windows-only parameters
-	`AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) 
-	`Publisher` - Author or publisher of the application **(REQUIRED)**
+	- `Publisher` - Author or publisher of the application **(REQUIRED)**
+	- `AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) (`false` by default)
 	#### Linux-only parameters
-	`GenericName` - Generic name of the application, for example `Web Browser`
+	- `AppEnv` - an array of environment variables that must be set for the program (see example [here](https://github.com/ZzEdovec/quInstaller#:~:text=configuration.%20For%20example,-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22:%22Rudi%22,%0A%20%20%20%20%22AppExec))
+	- `GenericName` - Generic name of the application, for example `Web Browser`
 	
 2. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
 3. Pack all the files of your program that need to be installed into an archive named `package.zip` and place it in the same folder.
@@ -53,14 +55,26 @@ For example,
         ]
     }
 
-**On Linux**, you can only use `%TEMP%` or `%USERHOME%` variables in the **uninstaller** configuration, but unlike the Windows version, you can use the `%JAVA_BIN%` and `%APP_PATH%` variables in the `AppExec` param of **installer** configuration.
+**On Linux**, you can only use `%TEMP%` or `%USERHOME%` variables in the **uninstaller** configuration, but unlike the Windows version, you can use the `%JAVA_BIN%` and `%APP_HOME%` variables in the `AppExec` and `AppEnv` params of **installer** configuration.
+
+- `%JAVA_BIN%` - the path to the Java main executable file, which the installer will copy to the program installation directory
+- `%APP_HOME%` - Program installation folder
+
 For example,
 
 > installercfg.json
 
     {
         "AppName":"Rudi",
-        "AppExec":"env GDK_BACKEND=x11 \"%JAVA_BIN%\" -jar \"%APP_PATH%/Rudi.jar\""
+        "AppExec": [
+	        "%JAVA_BIN%",
+	        "-jar",
+	        "%APP_HOME%/Rudi.jar"
+		],
+		"AppEnv": [
+			"GDK_BACKEND=x11",
+			"JAVA_HOME=%APP_HOME%/jre"
+		]
     }
 
 ### 🧪 Testing installer

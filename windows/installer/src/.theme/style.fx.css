@@ -1,8 +1,9 @@
 /* JavaFX CSS Style with -fx- prefix */
 
-.text-input{
+.text-input, .list-cell, .list-view, .list-view:focused{
     -fx-background-color:#1a1a1a;
     -fx-text-fill:#e6e6e6;
+    -fx-background-radius:2px;
 }
 
 .check-box .box{
@@ -42,4 +43,55 @@
 .progress-bar .bar{
     -fx-background-color:linear-gradient(to right,#188004,#66f74a);
     -fx-background-radius:2px;
+}
+
+.list-cell:filled:selected, .context-menu .menu-item:hover{
+    -fx-background-color:#4d4d4d;
+    -fx-text-fill:#fcfcfc;
+}
+
+.list-cell:filled:hover{
+    -fx-background-color:#333333;
+}
+
+.scroll-pane, .scroll-pane:focused, .scroll-pane .viewport{
+    -fx-background-color:Transparent;
+}
+
+.scroll-bar .increment-button, .scroll-bar .increment-arrow, .scroll-bar .decrement-button, .scroll-bar .decrement-arrow{
+    -fx-background-color:Transparent;
+    -fx-padding:0px;
+}
+
+.scroll-bar .track{
+    -fx-background-color:#292929;
+    
+}
+
+.scroll-bar .thumb{
+    -fx-background-color:#D1D1D1;
+    -fx-border-radius:0;
+    -fx-background-radius:0;
+}
+
+.scroll-bar{
+    -fx-pref-width: 8px;
+    -fx-pref-height: 8px;
+    -fx-background-color:#292929;
+}
+
+.context-menu{
+    -fx-background-color:#131519;
+    -fx-background-radius:7px;
+    -fx-border-color:#333333;
+    -fx-border-radius:7px;
+}
+
+.context-menu .menu-item{
+    -fx-background-color:Transparent;
+    -fx-background-radius:3px;
+}
+
+.context-menu .menu-item .label{
+     -fx-text-fill:#f2f2f2;
 }

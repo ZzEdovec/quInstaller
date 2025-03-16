@@ -78,6 +78,8 @@ class MainForm extends AbstractForm
                                                                 : Windows::expandEnv(Registry::of('HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')->read('Desktop')).'\\'.$GLOBALS['AppParams']['AppName'].'.lnk');
             fs::delete($GLOBALS['AppParams']['InstalledAsRoot'] ? Windows::getSystemDrive().':\ProgramData\Microsoft\Windows\Start Menu\Programs\\'.$GLOBALS['AppParams']['AppName'].'.lnk'
                                                                 : System::getEnv()['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\\'.$GLOBALS['AppParams']['AppName'].'.lnk');
+            fs::delete($GLOBALS['AppParams']['InstalledAsRoot'] ? Startup::getCommonStartupDirectory().'\\'.$GLOBALS['AppParams']['AppName'].'.lnk'
+                                                                : Startup::getUserStartupDirectory().'\\'.$GLOBALS['AppParams']['AppName'].'.lnk');
             
             uiLater(function (){$this->progressBar->progress = 25;});
         

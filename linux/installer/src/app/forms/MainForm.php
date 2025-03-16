@@ -22,6 +22,7 @@ class MainForm extends AbstractForm
         $this->appIcon->image = new UXImage('appIcon.png');
 
         $this->installPath->text = System::getProperty('user.home').'/.local/share/'.$GLOBALS['AppParams']['AppName'];
+        $this->autostart->selected = $GLOBALS['AppParams']['AppUsesAutoStart'];
         
         
         
@@ -37,6 +38,7 @@ class MainForm extends AbstractForm
         
         $this->label3->text = __('mainform.system.label',$GLOBALS['Locale']);
         $this->uninstaller->text = __('mainform.system.uninstaller',$GLOBALS['Locale']);
+        $this->autostart->text = __('mainform.system.autostart',$GLOBALS['Locale']);
         
         $this->button->text = __('mainform.installbutton',$GLOBALS['Locale']);
         
@@ -57,6 +59,7 @@ class MainForm extends AbstractForm
         {
             $this->appIcon->hide();
             
+            $this->panel4->show();
             Animation::fadeIn($this->panel4,500,[$this,'install']);
         });
     }
@@ -95,8 +98,23 @@ class MainForm extends AbstractForm
     {
         $desktopPath = str::trim(execute('xdg-user-dir DESKTOP',true)->getInput()->readFully());
         $appmenuPath = System::getProperty('user.home').'/.local/share/applications';
-        $execCMD = str::replace($GLOBALS['AppParams']['AppExec'],'%JAVA_BIN%',$this->installPath->text.'/jre/bin/java');
-        $execCMD = str::replace($execCMD,'%APP_PATH%',$this->installPath->text);
+        
+        if ($GLOBALS['AppParams']['AppEnv'] != null) {
+            $execCMD = 'env';
+            foreach ($GLOBALS['AppParams']['AppEnv'] as $env) {
+                $env = $this->decodeEnv($env);
+                $execCMD .= ' '.$env;
+            }
+        }
+        
+        foreach ($GLOBALS['AppParams']['AppExec'] as $arg) {
+            $arg = $this->decodeEnv($arg);
+            if (str::contains($arg,' '))
+                $arg = '"'.$arg.'"';
+            
+            $execCMD .= $execCMD == null ? $arg : ' '.$arg;
+        }
+        
         $shortcutContent = "[Desktop Entry]\n".
                            "Name=".$GLOBALS['AppParams']['AppName']."\n".
                            "GenericName=".$GLOBALS['AppParams']['GenericName']."\n".
@@ -127,12 +145,17 @@ class MainForm extends AbstractForm
             if ($this->desktopLink->selected)
             {
                 file_put_contents($desktopPath.'/'.$GLOBALS['AppParams']['AppName'].'.desktop',$shortcutContent);
-                new Process(['chmod','+x','/home/queinu/Рабочий стол/Rudi.desktop'])->start();
+                new Process(['chmod','+x',$desktopPath.'/'.$GLOBALS['AppParams']['AppName'].'.desktop'])->start();
                 uiLater(function (){$this->progressBar->progress += 10;});
             }
             if ($this->appmenuLink->selected)
             {
                 file_put_contents($appmenuPath.'/'.$GLOBALS['AppParams']['AppName'].'.desktop',$shortcutContent);
+                uiLater(function (){$this->progressBar->progress += 10;});
+            }
+            if ($this->autostart->selected)
+            {
+                file_put_contents(System::getProperty('user.home').'/.config/autostart/'.$GLOBALS['AppParams']['AppName'].'.desktop',$shortcutContent);
                 uiLater(function (){$this->progressBar->progress += 10;});
             }
             
@@ -169,10 +192,31 @@ class MainForm extends AbstractForm
             
             $this->runButton->on('click',function () use ($execCMD)
             {
-                execute($execCMD);
+                new Process($this->decodeEnv($GLOBALS['AppParams']['AppExec']),$this->installPath->text,$this->decodeEnv($GLOBALS['AppParams']['AppEnv']))->start();
                 App::shutdown();
             });
         });
+    }
+    
+    function decodeEnv($env)
+    {
+        if (is_array($env))
+        {
+            foreach ($env as $n => $e) {
+                $e = $this->decodeEnv($e);
+                
+                $env[$n] = $e;
+            }
+            
+            return $env;
+        }
+        else 
+        {
+            $env = str::replace($env,'%JAVA_BIN%',$this->installPath->text.'/jre/bin/java');
+            $env = str::replace($env,'%APP_HOME%',$this->installPath->text);
+            
+            return $env;
+        }
     }
 
 }

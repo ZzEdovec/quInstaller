@@ -14,7 +14,7 @@ class AppModule extends AbstractModule
      * @event action 
      */
     function doAction(ScriptEvent $e = null)
-    {    
+    {
         $GLOBALS['AppParams'] = Json::decode(file_get_contents('installercfg.json'));
         $GLOBALS['Locale'] = Locale::getDefault()->getLanguage();
         if (fs::isFile('lang/'.$GLOBALS['Locale']) == false)

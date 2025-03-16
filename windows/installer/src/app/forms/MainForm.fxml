@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504" prefWidth="688" styleClass="">
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528" prefWidth="688" styleClass="">
   <children>
-    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="header" layoutX="32" layoutY="24" prefHeight="30" prefWidth="296" styleClass="label " text="Установка program" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="header" layoutX="32" layoutY="24" prefHeight="30" prefWidth="632" styleClass="label " text="Установка program" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
       <font>
         <Font name="System Bold" size="20"/>
       </font>
@@ -59,7 +59,7 @@
       </titleFont>
     </Panel>
     <Data cursor="DEFAULT" enabled="1" id="data-panelAlt" visible="1"/>
-    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel3" layoutX="32" layoutY="304" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="112" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+    <Panel backgroundColor="#000000" borderColor="#333333" borderRadius="10" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="panel3" layoutX="32" layoutY="304" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="136" prefWidth="304" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
       <children>
         <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label3" layoutX="24" layoutY="16" prefHeight="17" prefWidth="192" styleClass="label " text="Системные параметры" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
           <font>
@@ -79,6 +79,12 @@
         <Data cursor="DEFAULT" enabled="1" id="data-label3" visible="1"/>
         <Data cursor="HAND" enabled="1" id="data-uninstaller" visible="1"/>
         <Data cursor="HAND" enabled="1" id="data-uninstallerReg" visible="1"/>
+        <CheckBox alignment="CENTER_LEFT" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="autostart" layoutX="24" layoutY="88" prefHeight="24" prefWidth="224" selected="true" styleClass="check-box " text="Добавить в автозагрузку" textAlignment="LEFT" textFill="#f2f2f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </CheckBox>
+        <Data cursor="HAND" enabled="1" id="data-autostart" visible="1"/>
       </children>
       <titleFont>
         <Font name="System Regular" size="12"/>
@@ -91,7 +97,7 @@
       </font>
     </ImageViewEx>
     <Data cursor="DEFAULT" enabled="1" id="data-appIcon" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="32" layoutY="424" prefHeight="48" prefWidth="304" styleClass="button " text="Установить" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="32" layoutY="448" prefHeight="48" prefWidth="304" styleClass="button " text="Установить" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
       <font>
         <Font name="System Bold" size="12"/>
       </font>
@@ -124,6 +130,6 @@
         <Font name="System Regular" size="12"/>
       </titleFont>
     </Panel>
-    <Data cursor="DEFAULT" enabled="1" id="data-panel4" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-panel4" visible=""/>
   </children>
 </AnchorPane>

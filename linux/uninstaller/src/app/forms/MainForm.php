@@ -75,6 +75,7 @@ class MainForm extends AbstractForm
             
             fs::delete(str::trim(execute('xdg-user-dir DESKTOP',true)->getInput()->readFully()).'/'.$GLOBALS['AppParams']['AppName'].'.desktop');
             fs::delete(System::getProperty('user.home').'/.local/share/applications/'.$GLOBALS['AppParams']['AppName'].'.desktop');
+            fs::delete(System::getProperty('user.home').'/.config/autostart/'.$GLOBALS['AppParams']['AppName'].'.desktop');
             
             uiLater(function (){$this->progressBar->progress = 25;});
             

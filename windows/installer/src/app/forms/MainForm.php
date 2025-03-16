@@ -27,6 +27,7 @@ class MainForm extends AbstractForm
         else 
             $this->installPath->text = System::getEnv()['APPDATA'].'\\'.$GLOBALS['AppParams']['AppName'];
         
+        $this->autostart->selected = $GLOBALS['AppParams']['AppUsesAutoStart'];
         
         
         
@@ -42,6 +43,7 @@ class MainForm extends AbstractForm
         $this->label3->text = __('mainform.system.label',$GLOBALS['Locale']);
         $this->uninstaller->text = __('mainform.system.uninstaller',$GLOBALS['Locale']);
         $this->uninstallerReg->text = __('mainform.system.reguninstaller',$GLOBALS['Locale']);
+        $this->autostart->text = __('mainform.system.autostart',$GLOBALS['Locale']);
         
         $this->button->text = __('mainform.installbutton',$GLOBALS['Locale']);
         
@@ -89,6 +91,7 @@ class MainForm extends AbstractForm
         {
             $this->appIcon->hide();
             
+            $this->panel4->show();
             Animation::fadeIn($this->panel4,500,[$this,'install']);
         });
     }
@@ -156,6 +159,14 @@ class MainForm extends AbstractForm
             if ($this->appmenuLink->selected)
             {
                 Windows::createShortcut($appmenuPath.'\\'.$GLOBALS['AppParams']['AppName'].'.lnk',$this->installPath->text.'\\'.$GLOBALS['AppParams']['AppExec']);
+                uiLater(function (){$this->progressBar->progress += 10;});
+            }
+            if ($this->autostart->selected)
+            {
+                if (Windows::isAdmin())
+                    Windows::createShortcut(Startup::getCommonStartupDirectory().'\\'.$GLOBALS['AppParams']['AppName'].'.lnk',$this->installPath->text.'\\'.$GLOBALS['AppParams']['AppExec']);
+                else 
+                    Windows::createShortcut(Startup::getUserStartupDirectory().'\\'.$GLOBALS['AppParams']['AppName'].'.lnk',$this->installPath->text.'\\'.$GLOBALS['AppParams']['AppExec']);
                 uiLater(function (){$this->progressBar->progress += 10;});
             }
             

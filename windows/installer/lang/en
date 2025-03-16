@@ -13,6 +13,7 @@
     "MAINFORM.SYSTEM.LABEL": "System settings",
     "MAINFORM.SYSTEM.UNINSTALLER": "Create uninstaller",
     "MAINFORM.SYSTEM.REGUNINSTALLER": "Register uninstaller in the registry",
+    "MAINFORM.SYSTEM.AUTOSTART": "Add to autostart",
     "MAINFORM.INSTALLATION.LABEL": "Installation progress",
     "MAINFORM.INSTALLATION.LABEL.SUCCESS": "Installation completed!",
     "MAINFORM.INSTALLATION.RUN": "Run",

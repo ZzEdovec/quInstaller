@@ -8,15 +8,15 @@
     "MAINFORM.PATH.PROGROOTCREATE": "Создать отдельную папку для установки программы?",
     "MAINFORM.LINKS.LABEL": "Ярлыки",
     "MAINFORM.LINKS.DESKTOP": "Ярлык на рабочем столе",
-    "MAINFORM.LINKS.APPMENU": "Ярлык в меню «Пуск»",
+    "MAINFORM.LINKS.APPMENU": "Ярлык в меню приложений",
     "MAINFORM.SYSTEM.LABEL": "Системные параметры",
     "MAINFORM.SYSTEM.UNINSTALLER": "Создать деинсталлятор",
     "MAINFORM.SYSTEM.REGUNINSTALLER": "Записать деинсталлятор в реестр",
+    "MAINFORM.SYSTEM.AUTOSTART": "Добавить в автозагрузку",
     "MAINFORM.INSTALLATION.LABEL": "Прогресс установки",
     "MAINFORM.INSTALLATION.LABEL.SUCCESS": "Установка завершена!",
     "MAINFORM.INSTALLATION.RUN": "Запустить",
     "MAINFORM.INSTALLATION.EXIT": "Выйти",
     "MAINFORM.INSTALLBUTTON": "Установить",
-    "MAINFORM.INSTALLBUTTON.STARTED": "Выполняется установка",
-    "MAINFORM.ERRORFETCHING": "Ошибка получения последней версии"
+    "MAINFORM.INSTALLBUTTON.STARTED": "Выполняется установка"
 }
