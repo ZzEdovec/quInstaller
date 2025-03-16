@@ -29,7 +29,7 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
     - `AppUsesAutoStart` - Specifies whether, by default, the user should be prompted to add the program to the startup
 	#### Windows-only parameters
 	- `Publisher` - Author or publisher of the application **(REQUIRED)**
-	- `AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) (`false` by default)
+	- `AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC)
 	#### Linux-only parameters
 	- `AppEnv` - an array of environment variables that must be set for the program (see example [here](https://github.com/ZzEdovec/quInstaller#-environment-variables))
 	- `GenericName` - Generic name of the application, for example `Web Browser`
