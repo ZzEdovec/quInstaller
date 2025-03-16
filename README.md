@@ -71,6 +71,7 @@ For example,
 	        "-jar",
 	        "%APP_HOME%/Rudi.jar"
 	],
+ 
 	"AppEnv": [
 		"GDK_BACKEND=x11",
 		"JAVA_HOME=%APP_HOME%/jre"
