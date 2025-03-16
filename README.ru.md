@@ -74,11 +74,12 @@ quInstaller - универсальный и простой установщик 
 	        "%JAVA_BIN%",
 	        "-jar",
 	        "%APP_HOME%/Rudi.jar"
-	],
-	"AppEnv": [
-		"GDK_BACKEND=x11",
-		"JAVA_HOME=%APP_HOME%/jre"
-	]
+	    ],
+ 
+	     "AppEnv": [
+		 "GDK_BACKEND=x11",
+		 "JAVA_HOME=%APP_HOME%/jre"
+        ]
     }
 
 ### 🧪 Тестирование установщика
