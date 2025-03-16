@@ -25,13 +25,13 @@ My projects are created out of pure enthusiasm, and if you appreciate my work, y
 		You can configure the installer parameters in this file.
 	#### Cross-platform parameters
 	- `AppName` - Name of your application **(REQUIRED)**
-	- `AppExec` - Main executable file of your program on Windows (string), array of arguments on Linux (even if you specify only the executable file to run without arguments, it should still be inside the array). For Linux see example [here](https://github.com/ZzEdovec/quInstaller#:~:text=configuration.%20For%20example%2C-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22%3A%22Rudi%22%2C%0A%20%20%20%20%22AppExec) **(REQUIRED)**
+	- `AppExec` - Main executable file of your program on Windows (string), array of arguments on Linux (even if you specify only the executable file to run without arguments, it should still be inside the array). For Linux see example [here](https://github.com/ZzEdovec/quInstaller#-environment-variables) **(REQUIRED)**
     - `AppUsesAutoStart` - Specifies whether, by default, the user should be prompted to add the program to the startup
 	#### Windows-only parameters
 	- `Publisher` - Author or publisher of the application **(REQUIRED)**
 	- `AppUsesRoot` - Specifies whether to force the request for administrator rights (UAC) (`false` by default)
 	#### Linux-only parameters
-	- `AppEnv` - an array of environment variables that must be set for the program (see example [here](https://github.com/ZzEdovec/quInstaller#:~:text=configuration.%20For%20example,-,installercfg.json,-%7B%0A%20%20%20%20%22AppName%22:%22Rudi%22,%0A%20%20%20%20%22AppExec))
+	- `AppEnv` - an array of environment variables that must be set for the program (see example [here](https://github.com/ZzEdovec/quInstaller#-environment-variables))
 	- `GenericName` - Generic name of the application, for example `Web Browser`
 	
 2. Place the logo of your program in the same folder where the `main.exe` (or `installer.jar` on Linux) file is located and name it `appIcon.png`.
